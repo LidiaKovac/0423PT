@@ -1,14 +1,29 @@
 body {
   /* background-color: black; */
   margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .card {
   width: 25%;
   aspect-ratio: 1/1.5;
   border-radius: 20px;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
+
+  margin: 200px;
+
+}
+
+.badge {
+  position: absolute;
+  background-color: #dd0814;
+  border: 3px dashed red;
+  right:-30px;
+  top: -10px;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
 }
 
 .card img {
