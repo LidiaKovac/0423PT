@@ -20,6 +20,8 @@ body {
 
 .sfumatura {
   position: absolute;
+  opacity: 1;
+  transition: 0.3s;
   width: 100%;
   height: 100%;
   background: rgb(0, 90, 101);
@@ -41,5 +43,34 @@ body {
 }
 
 .card:hover .sfumatura {
-    display: none;
+  opacity: 0;
+}
+
+.controls {
+  position: absolute;
+  bottom: -100px;
+  transition: 0.3s;
+}
+
+.card:hover .controls {
+  bottom: 20px;
+  width: 100%;
+}
+
+.btn {
+  margin-inline: 40%;
+  width: 20%;
+  aspect-ratio: 1/1;
+  background-color: #dd0814;
+  border-radius: 50%;
+  font-size: 30px;
+  position: relative;
+}
+
+.btn ion-icon {
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
 }
