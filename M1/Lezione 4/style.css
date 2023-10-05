@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+.container {
+    height: 100vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    align-content: flex-start;
+    /* flex container */
+}
+
+.card {
+    width: 20%;
+    min-width: 150px;
+    max-width: 250px;
+    aspect-ratio: 1/1;
+    background-color: rgb(218, 255, 158);
+    /* margin-inline: 20px; */
+    /* flex items */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    align-items: center;
+}
+
+nav img {
+    height: 100px;
+
+}
+
+.comandi {
+    display: flex;
+    gap: 20px
+}
