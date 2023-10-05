@@ -10,7 +10,7 @@ body {
     align-items: center;
     gap: 20px;
 
-    align-content: flex-start;
+    /* align-content: flex-start; */
     /* flex container */
 }
 
@@ -20,9 +20,35 @@ body {
     max-width: 250px;
     aspect-ratio: 1/1;
     background-color: rgb(218, 255, 158);
-    /* margin-inline: 20px; */
+
+
     /* flex items */
 }
+
+#bassa {
+    align-self: flex-end;
+}
+
+.primo {
+    order: 1;
+}
+
+.secondo {
+    order: 2;
+}
+
+.terzo {
+    order: 3
+}
+
+.quarto {
+    order: 4;
+}
+
+.quinto {
+    order: 5
+}
+
 
 nav {
     display: flex;
