@@ -61,7 +61,17 @@ for (let i = 0; i < 10; i++) {
 
 
 //scrivere un loop che stampi da 100 a 0
-for(let i = 100; i >= 0; i--) {
+for (let i = 100; i >= 0; i--) {
     //a. i === 100, true, 99
     console.log(i)
 }
+
+//mostra i numeri da 0 a 10 in modo discendente, saltando 3 e 8
+for (let i = 10; i >= 0; i--) {
+    if (i === 3 || i === 8) {
+        continue //se il numero non e;' 3 o 8 non si esegue
+    }
+    console.log(i)
+}
+
+//scrivi un algoritmo che dati  
