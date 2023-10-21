@@ -367,3 +367,4 @@ for (let i = 0; i < personaggi.length; i++) {
 }
 
 console.log(found.name + " con " + found.actor.length + " attori")
+

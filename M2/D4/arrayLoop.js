@@ -1265,32 +1265,66 @@ for (let i = 0; i < musical.length; i++) {
 console.log("Trova la canzone con titolo 'here i am alive'")
 for (let i = 0; i < musical.length; i++) {
     if (musical[i].title === "Here I Am Alive") {
-        console.log(musical[i])
+        // console.log(musical[i])
         break; //ferma il ciclo, una volta trovato l'elemento non serve piu' andare avanti
     }
 }
 
 
+// Array.metodo()
+
+//.push = aggiunge
+
 //trovare tutte le canzoni appartenente all'album "Ocean Avenue"
+// .filter 
 console.log("Trova tutte le canzoni appartenenti all'album 'Ocean Avenue'")
 let albumScelto = []
 for (let i = 0; i < musical.length; i++) {
-    const canzoneCorrente = musical[i];
-    if (canzoneCorrente.album.title === "Ocean Avenue") {
-        albumScelto.push(canzoneCorrente)
+    if (musical[i].album.title === "Ocean Avenue") {
+        albumScelto.push(musical[i].title)
     }
 }
 
-// console.log(albumScelto)
+console.log(albumScelto)
 
 
 //trovare tutte le canzoni con artista DIVERSO da "Yellowcard"
+//.filter
 console.log("Trova tutte le canzoni con artisti DIVERSI da 'Yellowcard'")
 let NONYellowCard = []
 for (let i = 0; i < musical.length; i++) {
     const canzoneCorrente = musical[i];
-    if (canzoneCorrente.artist !== "Yellowcard") {
+    if (canzoneCorrente.artist.name !== "Yellowcard") {
         NONYellowCard.push(canzoneCorrente)
     }
 }
-console.log(NONYellowCard)
+// console.log(NONYellowCard)
+const utenti = [
+    {
+        nome: "Aldo" //0
+    },
+    {
+        nome: "Giovanni" //1
+    },
+    {
+        nome: "Giacomo" //2
+    },
+    {
+        nome: "Luca Nervi" //3
+    }, 
+    {
+        nome: "Paolo Bitta" //4
+    }
+]
+// utenti.length => 5
+//
+utenti[0] // primo
+utenti[1] //secondo
+utenti[2] //terzo
+
+for(let i = 0; i<utenti.length ;i++) {
+    console.log(i) //0, 1, 2
+    console.log(utenti[i]) //nomi uno per uno
+    //inizio, fine, direzione
+    //     condizione, che quando non è più vera, il loop si ferma
+}
