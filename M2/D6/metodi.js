@@ -17,4 +17,14 @@ const fraseBoomer = arrayDiParole.join() //"ciao,a,tutti"
 const fraseOriginale = arrayDiParole.join(" ") //"ciao a tutti"
 const fraseBoomer2 = arrayDiParole.join(".......") //"ciao.......a.......tutti"
 const fraseBoomer3 = arrayDiParole.join("☺") //"ciao☺a☺tutti"
-console.log(fraseBoomer3)
+
+Math.random() //random da 0 a 1
+
+Math.floor() //arrotonda per difetto
+Math.ceil() //arrotondamento per eccesso
+Math.round() //arrotondamento "tradizionale"
+
+console.log(Math.random() * 10) //minimo 0, max 10 
+console.log(Math.round(Math.random() * 10)) //minimo 0, max 10 
+
+
