@@ -8,8 +8,8 @@
 
 const checkArray = function (arrayDiNumeriCasuali) {
     let somma = 0
-    for(let i = 0; i < arrayDiNumeriCasuali.length; i++) {
-        if(arrayDiNumeriCasuali[i] > 5) {
+    for (let i = 0; i < arrayDiNumeriCasuali.length; i++) {
+        if (arrayDiNumeriCasuali[i] > 5) {
             somma += arrayDiNumeriCasuali[i]
             console.log(arrayDiNumeriCasuali[i] + " E' maggiore di 5")
         } else {
@@ -34,13 +34,13 @@ console.log(sommaMaggiore5)
  ritornare la stringa originale senza alterarla.
 */
 
-const epify = function(string) {
+const epify = function (string) {
     // NO: let arrayStringa = string.split(" ") //"EPICODE ciao" => [EPICODE, ciao] MA, "EPICODEciao" => ??????
-    if(string.startsWith("EPICODE")) {
+    if (string.startsWith("EPICODE")) {
         //string.indexOf("EPICODE") === 0
         return string
     } else return "EPICODE" + string
-} 
+}
 
 console.log(epify("EPICODE rocks"))
 console.log(epify("STRIVE rocks"))
@@ -52,13 +52,13 @@ const shoppingCart = [
         id: 1,
         nome: "Patate",
         quantita: 23,
-        price: 4 
+        price: 4
     },
     {
         id: 2,
         nome: "Pomodori",
         quantita: 2,
-        price: 1 
+        price: 1
     },
     {
         id: 3,
@@ -82,16 +82,39 @@ const shoppingCart = [
  
 */
 
-const calcoloCarrello = function() {
+const calcoloCarrello = function () {
     //for
     let totale = 0
-    for(let i = 0; i < shoppingCart.length; i++) {
+    for (let i = 0; i < shoppingCart.length; i++) {
         //price * quantita => per ogni ogg
-       totale = totale + (shoppingCart[i].price * shoppingCart[i].quantita)
-    //    totale += (shoppingCart[i].price * shoppingCart[i].quantita)
+        totale = totale + (shoppingCart[i].price * shoppingCart[i].quantita)
+        //    totale += (shoppingCart[i].price * shoppingCart[i].quantita)
     }
     return totale
 }
 
 const totaleCarrello = calcoloCarrello()
 console.log(totaleCarrello)
+
+
+/* EXTRA 7
+Crea una funzione chiamata "average" che riceve un array come parametro e ne 
+ritorna la media aritmetica.
+*/
+
+const average = function (array) {
+    //(6 + 7 + 4.5 + 5.9)/4
+    // ???? / array.length
+    //somma, for 
+    let somma = 0
+    for (let i = 0; i < array.length; i++) {
+        somma += array[i]
+    }
+
+    return Math.round(somma / array.length)
+
+}
+
+const votiDiPierino = [6, 5, 4.5, 5.9, 3, 10]
+console.log(average(votiDiPierino))
+
