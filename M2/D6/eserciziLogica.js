@@ -72,7 +72,18 @@ const shoppingCart = [
         quantita: 1,
         price: 7
     }
+    //
 ]
+ 
+shoppingCart[shoppingCart.length - 1]//ultimo
+
+for(let i = 0; i < 10; i++) {
+   console.log(i) //0 -> 9
+}
+
+for(let i = 0; i < shoppingCart.length; i++) {
+    console.log(shoppingCart[i].nome)
+}
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". 

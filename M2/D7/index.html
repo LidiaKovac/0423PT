@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pippo {
+            text-align: right;
+        }
+        h1 {
+            background-color: lightgoldenrodyellow;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 4px solid orange;
+        }
+
+        .selezionato {
+            background-color: yellow;
+        }
+        /* 
+        h3 {
+            text-align: center;
+        } */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightblue;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        span {
+            /* <b> <strong> */
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        .bio {
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nome -->
+    <div>
+        <h1>Ken</h1>
+        <!-- posizione lavorativa -->
+        <h2>Spiaggia</h2>
+        <!-- foto -->
+        <img src="propic.gif" alt="I'm just Ken!" />
+        <!-- descrizione -->
+    </div>
+    <div class="bio">
+        Lorem ipsum dolor, <span> sit amet consectetur adipisicing elit </span>. Atque reprehenderit libero ullam
+        accusamus laborum.
+        Omnis impedit aut possimus quibusdam quis asperiores quod soluta dolorum ea iure. Reiciendis tempore quae quod.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque reprehenderit libero ullam accusamus laborum.
+        Omnis impedit aut possimus quibusdam quis asperiores quod soluta dolorum ea iure. Reiciendis tempore quae quod.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque reprehenderit libero ullam accusamus laborum.
+        Omnis impedit aut possimus <span> quibusdam quis asperiores quod soluta dolorum ea iure. Reiciendis tempore quae
+            quod. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque reprehenderit libero ullam accusamus
+            laborum.
+            Omnis impedit aut possimus quibusdam quis </span> asperiores quod soluta dolorum ea iure. Reiciendis tempore
+        quae quod. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque reprehenderit libero ullam accusamus
+        laborum.
+        Omnis impedit aut possimus quibusdam quis asperiores quod soluta dolorum ea iure. Reiciendis tempore quae quod.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque reprehenderit libero ullam accusamus laborum.
+        Omnis impedit aut possimus quibusdam quis asperiores quod soluta dolorum ea iure. Reiciendis tempore quae quod.
+    </div>
+    <!-- skills -->
+    <button onclick="highlight()">GIALLOH</button>
+    <button onclick="coloriRandom()">COLORIH</button>
+    <button onclick="applicaColore('rgb(0,255,0)')">VERDEH</button>
+    <button onclick="applicaColore('yellow')">GIALLOH 2</button>
+    <button onclick="applicaColore('red')">ROSSOH</button>
+    <h3>Skills</h3>
+    <ul onclick="pippo()">
+        <li> Surf </li>
+        <li> Party </li>
+        <li> Vivere a Mojo Dojo Casa House </li>
+    </ul>
+    <h3>Esperienze</h3>
+    <ol class="pippo">
+        <li>
+            Dog-sitter
+        </li>
+        <li>
+            Fidanzato di Barbie
+        </li>
+        <li>
+            Bagnino
+        </li>
+    </ol>
+
+    <script src="./index.js"></script>
+
+
+
+
+
+</body>
+
+</html>
