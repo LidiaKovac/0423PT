@@ -22,7 +22,6 @@ for (let i = 0; i < numbersButton.length; i++) {
     numberButton.onclick = getInnerTextFromButton
 }
 
-//TODO: attaccare una funzione al pulsante uguale 
 
 
 const calculateResult = function () {
@@ -40,14 +39,52 @@ const calculateResult = function () {
         //23+6
         //paperi,o e mi,ie
         const numeri = displayContent.split("+")//23,6
-        console.log(Number(numeri[0]) + Number(numeri[1]))
+        input.value = (Number(numeri[0]) + Number(numeri[1]))
         //.valueAsNumber => input type number
 
     }
+    
+    if(displayContent.includes("-")) { //-
+        //vogliamo fare una somma
+        //23-6
+        //paperi,o e mi,ie
+        const numeri = displayContent.split("-")//23,6
+        input.value = (Number(numeri[0]) - Number(numeri[1]))
+
+    }
+
+    if(displayContent.includes("*")) { //*
+        //vogliamo fare una somma
+        //23*6
+        //paperi,o e mi,ie
+        const numeri = displayContent.split("*")//23,6
+        input.value = (Number(numeri[0]) * Number(numeri[1]))
+
+    }
+
+    if(displayContent.includes("/")) { ///
+        //vogliamo fare una somma
+        //23/6
+        //paperi,o e mi,ie
+        const numeri = displayContent.split("/")//23,6
+        input.value = (Number(numeri[0]) / Number(numeri[1]))
+    }
 }
+
+const user=  {
+    name: "Pippo"
+}
+
+console.log(`utente: ${user}`)
+
+//TODO: attaccare una funzione al pulsante uguale 
 
 //*damiano
 const button = document.querySelector(".key--equal")
 // button.onclick = calculateResult
 button.addEventListener("click", calculateResult)
 
+const reset = document.querySelector(".calculator__reset")
+reset.onclick = function() {
+    document.querySelector("input").value = null
+}
