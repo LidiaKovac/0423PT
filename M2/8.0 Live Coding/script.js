@@ -36,9 +36,7 @@ const calculateResult = function () {
     //if
     //.includes()
     if(displayContent.includes("+")) { //+
-        //vogli
-        
-        amo fare una somma
+        //vogliamo fare una somma
         //23+6
         //paperi,o e mi,ie
         const numeri = displayContent.split("+")//23,6
