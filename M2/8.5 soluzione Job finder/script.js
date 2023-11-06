@@ -93,12 +93,12 @@ const query = {
 }
 const ul = document.querySelector("ul")
 
-const getjobs = function (changeEvent) {
+const getjobs = function (keyUpEvent) {
     ul.innerHTML = ""
-    const inputValue = changeEvent.target.value.toLowerCase()
-    if (changeEvent.target.id === "position") {
+    const inputValue = keyUpEvent.target.value.toLowerCase()
+    if (keyUpEvent.target.id === "position") {
         query.position = inputValue
-    } else if (changeEvent.target.id === "location") {
+    } else if (keyUpEvent.target.id === "location") {
         query.location = inputValue
     }
     for (let i = 0; i < jobs.length; i++) {
