@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    object-fit: cover;
+}
+
+.box-model-example {
+  width: 200px;
+  height: 200px;
+
+  /* padding: 20px; */
+  margin: 20px;
+  background-color: aqua;
+  border: 5px solid red;
+
+  box-sizing: border-box;
+
+  /* Opzioni per applicare padding */
+  /* Vale anche per border e margin */
+  padding-inline-start: ; /* sx */
+  padding-inline-end: ; /* dx */
+
+  padding-block-start: ; /* top */
+  padding-block-end: ; /* bottom */
+
+  padding: 20px 10px; /* block, inline */
+  padding: 3px 50px 10px 30px; /* senso orario */
+
+  padding-inline: 10px 30px;
+  padding-block: 40px 2px;
+  padding-left: 30px; /* prenderà la sx da qui, tutto il resto dalle linee precedenti */
+}
+
+.box-model-example span {
+  background-color: yellow;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label[for="checkbox"] {
+  display: block;
+  width: 50px;
+  height: 50px;
+
+  background-color: transparent;
+  border: 3px fuchsia solid;
+  transition: 0.5s;
+}
+
+/* ~, " ", > */
+
+input[type="checkbox"]:checked ~ label {
+  background-color: fuchsia;
+}
+
+h1 {
+  color: blue;
+}
+
+.titolo {
+  color: green;
+  background-color: aqua;
+}
+
+#titolo {
+  color: red;
+  /* background-color: aqua; */
+}
+
+#title-box:has(h1, h3, h6) {
+  background-color: antiquewhite;
+}
+
+#title-box {
+  /* poco supporto per adesso */
+  & h1,
+  h3,
+  h6 {
+    background-color: red;
+  }
+}
+
+#title-box h1 {
+  /* tutti gli h1 dentro gli elementi con id title-box */
+}
+
+.titolo #titolo {
+  /* tutti gli elementi con id titolo dentro el con classe titolo */
+}
+
+.titolo#titolo {
+}
+/* el con classe titolo E id titolo */
+
+#title-box h1.titolo#titolo {
+  /* 
+        gli h1 con classe titolo e id titolo
+        dentro gli elementi con id title-box
+    */
+}
+
+.figli > h1 {
+  background-color: greenyellow;
+}
+
+/*  l'h3 SUBITO DOPO all'h1 */
+h1 + h3 {
+  border: 5px orange solid;
+}
+
+/* tutti gli h3 DOPO l''h1 */
+h1 ~ h3 {
+  text-decoration: line-through solid;
+}
+input[type~="check"] {
+  color: black;
+}
+
+button {
+  background-color: blue;
+}
+
+button:disabled {
+  background-color: rgba(0, 0, 255, 0.315);
+}
+input[type="text"] {
+  border: none;
+  background-color: rgba(255, 166, 0, 0.205);
+}
+input[type="text"]:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid orange;
+}
+
+body > h1:first-of-type {
+  /* SEMPRE IL PRIMO H1 */
+  background-color: gold;
+}
+
+/* document.querySelector("h3:nth-of-type(3)")
+    document.querySelectorAll("h3")[2] 
+*/
+h3:nth-of-type(3) {
+}
+
+h3:nth-child(3) {
+}
+
+#title-box > *:nth-child(3) {
+    /* terzo figlio di title-box */
+}
+
+p::first-letter {
+    text-transform: uppercase;
+}
+
+h3:nth-of-type(even) {
+  font-weight: normal;
+}
