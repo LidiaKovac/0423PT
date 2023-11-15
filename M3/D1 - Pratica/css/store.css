@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6ede6;
+  padding: 40px 30px;
+  margin: 0px;
+}
+
+.container {
+    background-color: white;
+    padding: 60px;
+    min-height: calc(100vh - 80px);
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.card {
+    width: 20%;
+    transition: 0.3s;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 10px 0px rgb(0,0,0,0.08);
+    -webkit-box-shadow: 5px 5px 10px 0px rgb(0,0,0,0.08);
+    transform: scale(1.01);
+}
+
+.card button {
+    background-color: #D16A1D;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    /* align-self: flex-end; */
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+}
+
+.card .card__description {
+    margin-bottom: 20px;
+    max-width: 100%;
+    overflow: hidden;
+
+    display: -webkit-box;
+    /* 
+       proprietà display che definisce il container da "tagliare" 
+    */
+    -webkit-line-clamp: 3; /* definisce dopo quante righe tagliare ilcontainer definitio con webkit box */
+    -webkit-box-orient: vertical; /* definisce l'orientamento della box, "flex-direction" ma per il line clamp */
+    
+}
+
+.card h3 {
+    width: 90%;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.selected {
+    outline: 2px solid #D16A1D;
+}
