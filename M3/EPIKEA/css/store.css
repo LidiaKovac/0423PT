@@ -76,3 +76,8 @@
 .selected {
     outline: 2px solid #D16A1D;
 }
+
+
+.card__description ion-icon {
+   color: orange
+}

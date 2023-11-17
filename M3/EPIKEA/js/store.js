@@ -575,25 +575,65 @@ for (let i = 0; i < products.length; i++) {
   // i < 10 ? "0" + i : i
   container.innerHTML += `
     <div class="card" onclick="select(event)" >
-        <img src="${products[i].mainImageUrl}" />
+        <img src="${
+          products[i]?.mainImageUrl || "http://placehold.it/300x300"
+        }" />
         <h3>
-            <span class="card__title-number">${i < 10 ? "0" + i : i}.</span> 
-            ${products[i].name}
+            <span class="card__title-number">${i < 10 ? "0" + i : i}.</span>
+            ${products[i]?.name || ""}
         </h3>
         <div class="card__body">
+        <div class="card__description">
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+      </div>
 
-          <button><ion-icon name="cart-outline"></ion-icon> ${products[
-            i
-          ].salesPrice.numeral.toFixed(2)}${
-    products[i].salesPrice.currencyCode
-  }</button>
+          <button><ion-icon name="cart-outline"></ion-icon> ${
+            products[i]?.salesPrice?.numeral?.toFixed(2) || ""
+          }${products[i]?.salesPrice?.currencyCode || ""}</button>
         </div>
       </div>`;
+
+  const stars = document.querySelectorAll("ion-icon[name*=star]");
+
+  const toggleStar = function (event, index) {
+    const starPerCard = event.target.closest(".card").querySelectorAll("ion-icon[name*=star]");
+    console.log(starPerCard)
+    for (let i = 0; i < starPerCard.length; i++) {
+      if (i <= index) {
+        starPerCard[i].name = "star";
+      } else {
+        starPerCard[i].name = "star-outline";
+      }
+      // event.target.setAttribute("name", "star")
+    }
+  };
+
+  const emptyStar = function (event, index) {
+    for (let i = 0; i <= index; i++) {
+      stars[i].name = "star-outline";
+    }
+  };
+
+  for (let i = 0; i < stars.length; i++) {
+    stars[i].onmouseover = function (event) {
+      toggleStar(event, i);
+    };
+    stars[i].onmouseleave = function (event) {
+      emptyStar(event, i);
+    };
+    stars[i].onclick = function (event) {
+      toggleStar(event, i);
+      stars[i].onmouseleave = null;
+    };
+  }
 }
 
 const select = function (clickEvent) {
   // clickEvent.target card che ho cliccato
-  console.log(clickEvent.target);
   const selected = document.querySelectorAll(".selected");
   for (let i = 0; i < selected.length; i++) {
     selected[i].classList.remove("selected");
@@ -601,3 +641,6 @@ const select = function (clickEvent) {
 
   clickEvent.target.closest(".card").classList.add("selected");
 };
+
+// ☺☺☺☺☺
+// 01234
