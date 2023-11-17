@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./teoria.css" />
+  </head>
+  <body>
+    <h3><code> flex-direction: row </code></h3>
+    <h3><code> order: x </code></h3>
+    <div class="d-flex flex-row">
+      <!-- default: 0,
+      - se no order, primi in posizione
+      - se order <0, prima di quelli senza order
+      - se uguali, vicini ma secondo ordine HTML
+      -->
+      <div class="child">
+        <input type="number" onchange="changeOrder(event)" />
+      </div>
+      <div class="child">
+        <input type="number" onchange="changeOrder(event)" />
+      </div>
+      <div class="child">
+        <input type="number" onchange="changeOrder(event)" />
+      </div>
+      <div class="child">
+        <input type="number" onchange="changeOrder(event)" />
+      </div>
+      <div class="child">
+        <input type="number" onchange="changeOrder(event)" />
+      </div>
+    </div>
+    <h3 style="text-align: right">
+      <code> flex-direction: row-reverse </code>
+    </h3>
+    <div class="d-flex flex-row-reverse">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+    <h3><code> flex-direction: column </code></h3>
+    <div class="d-flex flex-column">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+    <h3><code> flex-direction: column-reverse </code></h3>
+
+    <div class="d-flex flex-column-reverse">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+
+    <h3><code>justify-content: flex-start</code></h3>
+    <div class="d-flex flex-row justify-content-start">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+    <h3 style="text-align: right"><code>justify-content: flex-end</code></h3>
+    <div class="d-flex flex-row justify-content-end">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+    <h3><code>justify-content: center</code></h3>
+    <div class="d-flex flex-row justify-content-center">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+
+    <h3><code>justify-content: space-between</code></h3>
+    <div class="d-flex flex-row justify-content-between">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+
+    <h3><code>justify-content: space-around</code></h3>
+    <div class="d-flex flex-row justify-content-around">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+    <h3><code>justify-content: space-evenly</code></h3>
+    <div class="d-flex flex-row justify-content-even">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+
+    <h3><code>align-items: flex-start</code></h3>
+    <div class="d-flex flex-column align-items-start">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+
+    <h3 style="text-align: right"><code>align-items: flex-end</code></h3>
+    <div class="d-flex flex-column align-items-end">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+
+    <h3 style="text-align: center"><code>align-items: center</code></h3>
+    <div class="d-flex flex-column align-items-center">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+
+    <h3><code>flex-grow: x</code></h3>
+    <div class="d-flex flex-row align-items-center" id="flex-grow">
+      <div class="child">
+        <img src="http://placehold.it/300x300" alt="" />
+      </div>
+      <div class="child child--big">
+        <img src="http://placehold.it/300x300" alt="" />
+      </div>
+      <div class="child">
+        <img src="http://placehold.it/300x300" alt="" />
+      </div>
+    </div>
+
+    <script>
+      const changeOrder = function (changeEvent) {
+        // changeEvent.target.value
+        // .style
+        const input = changeEvent.target; //input
+        const child = input.parentElement;
+        child.style = `order: ${input.value}`;
+      };
+    </script>
+  </body>
+</html>

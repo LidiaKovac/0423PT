@@ -566,7 +566,7 @@ const products = [
 // stelline
 // pannello laterale con selezione
 
-const container = document.querySelector(".container");
+const container = document.querySelector(".store__wrap");
 for (let i = 0; i < products.length; i++) {
   // if(i < 10) {
   //   "0" + i

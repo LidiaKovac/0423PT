@@ -1,0 +1,90 @@
+/* sfondo chiaro:  #F6EDE6 */
+/* colore: #CCCCCC */
+/* colore 2: #DFE7F2 */
+/* accent: #D16A1D */
+.container {
+
+  position: relative;
+}
+
+section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+section h1 {
+  font-size: 60px;
+  font-weight: normal;
+}
+
+section button {
+  background-color: #d16a1d;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+
+.card {
+  position: absolute;
+  width: 15%;
+  padding: 20px;
+  height: 65%;
+  bottom: -40px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card:first-of-type {
+  right: calc(30% + 15%);
+  background-color: #dfe7f2;
+  height: unset;
+}
+
+.card:nth-of-type(2) {
+  right: calc(15% + 10%);
+
+  background-color: #b6b5b5;
+}
+
+.card:last-of-type {
+  right: 5%;
+  bottom: 100px;
+  background-color: #ffb984;
+}
+
+.card p {
+  font-size: 12px;
+}
+
+.line {
+  position: absolute;
+  height: calc(100vh - 40px);
+  width: 0px;
+  top: 0;
+  border: 1px solid;
+}
+
+.line:first-of-type {
+  right: calc(30% + 15%);
+  border-color: #dfe7f2;
+}
+
+.line:nth-of-type(2) {
+  right: calc(15% + 10%);
+
+  border-color: #b6b5b5;
+}
+
+.line:nth-of-type(3) {
+  right: 5%;
+  border-color: #ffb984;
+  height: calc(100vh - 220px);
+  bottom: 0px;
+  top: unset;
+}
