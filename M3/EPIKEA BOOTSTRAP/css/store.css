@@ -1,0 +1,64 @@
+.store__wrap {
+  /* display: flex;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 40px; */
+}
+
+.card {
+  /* width: 20%; */
+  /* max-width: 20%;
+  flex: 1 1 20%; */
+  transition: 0.3s;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 10px 0px rgb(0, 0, 0, 0.08);
+  -webkit-box-shadow: 5px 5px 10px 0px rgb(0, 0, 0, 0.08);
+  transform: scale(1.01);
+}
+
+.card button {
+  background-color: #d16a1d;
+  /* padding: 10px 25px; */
+  border: none;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* align-self: flex-end; */
+}
+.card .btn:hover {
+  background-color: #ffd5b5;
+}
+.card img {
+  /* width: 100%;
+    object-fit: contain; */
+  /* aspect-ratio: 1/1; */
+}
+
+.card .card__description {
+  margin-bottom: 20px;
+  max-width: 100%;
+  overflow: hidden;
+
+  display: -webkit-box;
+  /* 
+       proprietà display che definisce il container da "tagliare" 
+    */
+  -webkit-line-clamp: 3; /* definisce dopo quante righe tagliare ilcontainer definitio con webkit box */
+  -webkit-box-orient: vertical; /* definisce l'orientamento della box, "flex-direction" ma per il line clamp */
+}
+
+.selected {
+  outline: 2px solid #d16a1d;
+}
+
+.card__description ion-icon {
+  color: orange;
+}

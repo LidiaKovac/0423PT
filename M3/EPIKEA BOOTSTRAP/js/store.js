@@ -456,7 +456,6 @@ const products = [
       discount: "",
     },
   },
-  null,
   {
     name: "SANDSBERG",
     mainImageUrl:
@@ -584,6 +583,7 @@ for (let i = 0; i < products.length; i++) {
 //   </div>
 // </div>
   container.innerHTML += `
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3"> 
     <div class="card" onclick="select(event)" >
         <img src="${
           products[i]?.mainImageUrl || "http://placehold.it/300x300"
@@ -601,11 +601,13 @@ for (let i = 0; i < products.length; i++) {
           <ion-icon name="star-outline"></ion-icon>
       </div>
 
-          <button class="btn"><ion-icon name="cart-outline"></ion-icon> ${
+          <button class="btn rounded-pill"><ion-icon name="cart-outline"></ion-icon> ${
             products[i]?.salesPrice?.numeral?.toFixed(2) || ""
           }${products[i]?.salesPrice?.currencyCode || ""}</button>
         </div>
-      </div>`;
+      </div>
+      </div>
+      `;
 
   const stars = document.querySelectorAll("ion-icon[name*=star]");
 
