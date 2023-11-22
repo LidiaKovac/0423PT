@@ -1,0 +1,28 @@
+:root {
+    --bs-success-rgb: 152, 255, 166;
+    --bs-dark-bg-subtle: rgb(51, 56, 61)
+}
+:root .btn-success {
+    --bs-btn-bg: rgb(152,255,166);
+    --bs-btn-border-color: rgb(152,255,166);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: white;
+}
+
+.btn-success {
+  color: black;
+}
+
+.card,.list-group > li {
+    background-color: rgb(33,37,41);
+    color: white;
+    border: none;
+}
+
+.card .card-header
+ {
+    color: black
+}
+
