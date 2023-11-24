@@ -1,0 +1,23 @@
+body {
+    min-height: 100vh;
+    margin: 0px;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    object-fit: cover;
+}
+
+#header {
+    min-height: 100vh;
+}
+
+/* .col-6 {
+    width: calc(calc(12/6) * 100) / 12;
+    width: 50%;
+} */
+

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="row gx-0 h-100">
+      <div class="col-2 d-none d-sm-block bg-danger"></div>
+      <div class="col-12 col-sm-10 bg-success">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <main class="container">
+          <h2>Titoletto</h2>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#header" 
+            aria-expanded="false" aria-controls="header">
+              Button with data-bs-target
+            </button>
+
+
+
+
+          <div class="row bg-warning h-50 g-0 collapse" id="header">
+            <div class="col-12 col-sm-5 bg-info h-50">
+              <div class="row h-100 g-2 p-2">
+                <div class="col-12 col-md-6 h-50">
+                  <img src="http://placehold.it/300x300" class="w-100" />
+                </div>
+                <div class="col-12 col-md-6 h-50">
+                  <img src="http://placehold.it/300x300" class="w-100" />
+                </div>
+                <div class="col-12 col-md-6 h-50">
+                  <img src="http://placehold.it/300x300" class="w-100" />
+                </div>
+                <div class="col-12 col-md-6 h-50">
+                  <img src="http://placehold.it/300x300" class="w-100" />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-7 bg-primary">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              vitae, quo magni nihil maiores cupiditate molestias veritatis,
+              asperiores iusto earum recusandae obcaecati quia reprehenderit
+              debitis? Eius, velit maxime. Minus, libero!
+            </div>
+          </div>
+          <div id="carosello_1" class="carousel slide ">
+            <div class="carousel-inner ">
+              <div class="carousel-item active">
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+ 
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-2">
+                    <img
+                      src="http://placehold.it/1600x900"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carosello_1"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carosello_1"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaleRegistrazione">
+            Launch demo modal
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade " id="modaleRegistrazione" tabindex="-1" aria-labelledby="modaleRegistrazioneLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+              <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="modaleRegistrazioneLabel">Registrati</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                      
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2">@example.com</span>
+                      </div>
+                      
+                      
+                      <div class="input-group">
+                        <span class="input-group-text">Bio</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                      </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            Button with data-bs-target
+          </button>
+          
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Informazioni</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+              </div>
+              <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
