@@ -151,38 +151,48 @@ const travels = [
   },
 ];
 
-document.querySelector("#travels").innerHTML = travels
-  .map(
-    (t) => `
-<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-<div class="card  h-100" >
-<div class="img-accent"></div> 
-  <img src="${t.image}" class="card-img-top" alt="${t.description}">
-  
-  <div class="card-body h-50 d-flex flex-column justify-content-between ">
-    <h5 class="card-title">${t.destination}</h5>
-    <p> ${t.description} </p>
-    <button data-bs-target="#detailsModal" data-bs-toggle="modal"  onclick="openModal('${t.destination}')" class="btn btn-primary mt-4">Take me there! 🧳</button>
-</div> </div> </div>
-
-`
-  )
-  .join("");
+const row = document.querySelector("#travels");
+// .innerHTML
+for (let i = 0; i < travels.length; i++) {
+  row.innerHTML += `
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="card h-100" >
+      <div class="img-accent"></div> 
+        <img src="${travels[i].image}" class="card-img-top" alt="${travels[i].description}">
+        
+        <div class="card-body h-50 d-flex flex-column justify-content-between ">
+          <h5 class="card-title">${travels[i].destination}</h5>
+          <p> ${travels[i].description} </p>
+          <button onclick="openModal('${travels[i].destination}')" data-bs-toggle="modal" data-bs-target="#detailsModal" class="btn btn-primary mt-4">Volo via 🤡</button>
+      </div> 
+    </div> 
+  </div>
+  `;
+}
 
 const openModal = function (destination) {
-  const travel = travels.find((t) => t.destination === destination);
-  const modalImg = document.querySelector(".modal img");
-  modalImg.src = travel.image;
-  const modalDestination = document.querySelector(".modal h3");
-  modalDestination.innerText = travel.destination;
-  const modalDates = document.querySelectorAll(".modal .list-group-item");
-  modalDates[0].innerText += travel.start_date;
-  modalDates[1].innerText += travel.end_date;
-  const modalPrice = document.querySelector(".modal .modal-body h3.price");
-  modalPrice.innerHTML =
-    travel.price +
-    "€  " +
-    `<span class="ms-2 badge bg-dark">BLACK FRIDAY!</span>`;
-  const modalDescription = document.querySelector(".modal p");
-  modalDescription.innerText = travel.description;
+  let found;
+  for (let i = 0; i < travels.length; i++) {
+    if (destination === travels[i].destination) {
+      found = travels[i];
+      break;
+    }
+  }
+  const modalBody = document.querySelector(".modal-body")
+  modalBody.innerHTML =  `<div class="row">
+  <div class="col-7">
+    <img src="${found.image}" class="w-100" alt="${found.description}" />
+  </div>
+  <div class="col-5 d-flex flex-column gap-4 justify-content-around align-items-start">
+    <h3>${found.destination}</h3>
+    <p>
+      ${found.description}
+    </p>
+      <div class="list-group-item">🛫 Leaving: ${found.start_date}</div>
+      <div class="list-group-item">🛬 Back: ${found.end_date}</div>
+    <h3 class="price btn bg-warning">
+      ${found.price} <span class="badge bg-dark"> BLACK FRIDAY! </span> 
+    </h3>
+  </div>
+</div>`
 };

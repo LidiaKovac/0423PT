@@ -43,7 +43,15 @@ body {
   padding: 5px;
 }
 
+#travels .card .card-body p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
 #travels .card .img-accent:has(+ .card-img-top:hover) {
+    /* row - card - if(.img-accent ACCANTO ha .card-img-top:hover) */
   transform: scale(1.2) rotate(8deg);
 }
 
