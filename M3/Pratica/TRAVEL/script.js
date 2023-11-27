@@ -157,7 +157,7 @@ for (let i = 0; i < travels.length; i++) {
   row.innerHTML += `
   <div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <div class="card h-100" >
-      <div class="img-accent"></div> 
+      <div class="img-accent position-absolute w-100 z-index-0"></div> 
         <img src="${travels[i].image}" class="card-img-top" alt="${travels[i].description}">
         
         <div class="card-body h-50 d-flex flex-column justify-content-between ">
@@ -169,8 +169,7 @@ for (let i = 0; i < travels.length; i++) {
   </div>
   `;
 }
-
-const openModal = function (destination) {
+const findTravel = function (destination) {
   let found;
   for (let i = 0; i < travels.length; i++) {
     if (destination === travels[i].destination) {
@@ -178,8 +177,31 @@ const openModal = function (destination) {
       break;
     }
   }
-  const modalBody = document.querySelector(".modal-body")
-  modalBody.innerHTML =  `<div class="row">
+  return found;
+};
+const addToCart = function (destination) {
+  const found = findTravel(destination);
+  const container = document.querySelector("#cart");
+  container.innerHTML += `
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="card h-100" >
+    <div class="img-accent position-absolute w-100 z-index-0"></div> 
+      <img src="${found.image}" class="card-img-top" alt="${found.description}">
+      
+      <div class="card-body h-50 d-flex flex-column justify-content-between ">
+        <h5 class="card-title">${found.destination}</h5>
+        <p> ${found.description} </p>
+        <button onclick="openModal('${found.destination}')" data-bs-toggle="modal" data-bs-target="#detailsModal" class="btn btn-primary mt-4">Volo via 🤡</button>
+    </div> 
+  </div> 
+</div>
+  
+  `;
+};
+const openModal = function (destination) {
+  const found = findTravel(destination);
+  const modalBody = document.querySelector(".modal-body");
+  modalBody.innerHTML = `<div class="row">
   <div class="col-7">
     <img src="${found.image}" class="w-100" alt="${found.description}" />
   </div>
@@ -190,9 +212,12 @@ const openModal = function (destination) {
     </p>
       <div class="list-group-item">🛫 Leaving: ${found.start_date}</div>
       <div class="list-group-item">🛬 Back: ${found.end_date}</div>
-    <h3 class="price btn bg-warning">
-      ${found.price} <span class="badge bg-dark"> BLACK FRIDAY! </span> 
-    </h3>
+    <button onclick="addToCart('${found.destination}')" class="price btn bg-warning">
+     Aggiungi al carrello: €${found.price} <span class="badge bg-dark text-white"> BLACK FRIDAY! </span> 
+    </button>
   </div>
-</div>`
+</div>`;
 };
+
+// carrello
+
