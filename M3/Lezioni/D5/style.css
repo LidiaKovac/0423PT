@@ -1,0 +1,105 @@
+/* CARD - LAYOUT + HOVER */
+.movie__wrap {
+  transition: 0.2s;
+  transition-delay: 0.2s;
+  cursor: pointer;
+}
+
+.movie__wrap:hover {
+  transform: scale(1.5);
+  border-radius: 10px;
+}
+
+.movie__wrap img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.movie__wrap img,
+.movie__wrap .badge {
+  z-index: -1;
+}
+
+.movie__wrap .movie__details {
+  height: 0px;
+  opacity: 0;
+  transition: 0.2s;
+  transition-delay: 0.2s;
+  transition-timing-function: ease-in-out;
+  top: 100%;
+  z-index: 2;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.movie__wrap:hover .movie__details {
+  height: unset;
+  opacity: 1;
+}
+
+.movie__wrap .movie__details p {
+  color: rgb(255, 255, 255, 0.6);
+  font-weight: bold;
+}
+
+/* CARD - BUTTONS */
+.movie__wrap .movie__controls .movie__play {
+  aspect-ratio: 1/1;
+  background-color: white;
+  border-radius: 50%;
+  width: 25%;
+  font-size: 25px;
+  padding-inline-start: 10px;
+  border: none;
+}
+
+.movie__wrap .movie__controls h4 {
+  width: 40%;
+  font-size: 13px;
+}
+
+.movie__wrap p,
+.movie__wrap h3 {
+  font-size: 13px;
+}
+
+.movie__wrap p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.movie__wrap .movie__details .badge {
+  background-color: rgb(255, 255, 255, 0.3);
+  font-size: 13px;
+  /* border-radius: 5px;
+  padding-inline: 5px; */
+  /* font-weight: bold; */
+}
+
+.movie__wrap .movie__controls .movie__options button {
+  aspect-ratio: 1/1;
+  width: 50%;
+  border-radius: 50%;
+  font-size: 13px;
+  background-color: rgb(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+}
+
+.movie__wrap .movie__controls button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* carosello */
+.carousel-inner {
+    overflow: visible;
+}

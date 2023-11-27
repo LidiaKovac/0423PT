@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-dark">
+      <div id="carouselExampleIndicators" class="carousel slide mt-5">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row justify-content-center gx-2">
+              <div class="col-2">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 d-none d-sm-block">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 d-none d-md-block">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center gx-2">
+              <div class="col-2">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 d-none d-sm-block">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 d-none d-md-block">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center gx-2">
+              <div class="col-2">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 d-none d-sm-block">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2 d-none d-md-block">
+                <div class="movie__wrap position-relative">
+                  <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/d62d7a07bf649fa011cc0d445118952c493d4de8548313d112809e7060e73e61.jpg"
+                    class="position-relative w-100"
+                  />
+                  <span class="badge bg-primary position-absolute start-0 top-0"
+                    >PRIME</span
+                  >
+                  <div class="movie__details position-absolute w-100">
+                    <p>
+                      <ion-icon
+                        name="checkmark-circle"
+                        class="text-info"
+                      ></ion-icon>
+                      Incluso con Prime
+                    </p>
+                    <div
+                      class="movie__controls d-flex align-items-center justify-content-between gap-2"
+                    >
+                      <button class="movie__play">
+                        <ion-icon name="play"></ion-icon>
+                      </button>
+                      <h4>
+                        Riprendi <br />
+                        S 3 E 41
+                      </h4>
+                      <div class="movie__options d-flex gap-1">
+                        <button>
+                          <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                          <ion-icon name="ban-outline"></ion-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <h3 class="mt-2">Camera Cafè</h3>
+                    <span class="badge"> 13+ </span>
+                    <p>
+                      Stagione 3 - Luca Bizzarri e Paolo Kessisoglu sono i
+                      protagonistici di questa sitcom ambientata in un ufficio
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
