@@ -178,49 +178,242 @@ const movies = [
   },
 ];
 
-movies.sort(() => Math.random() - 0.5)
-console.log(movies.length) //22
+movies.sort(() => Math.random() - 0.5);
+console.log(movies.length); //22
 // carosello: 5 elementi per pagina
 // per ogni carousel item, non possiamo creare col tutte uguali,
 // ma ogni col deve avere delle classi specifiche
 
-
-// INGREDIENTI: 
-// ?  ciclo 
+// INGREDIENTI:
+// ?  ciclo
 // ?  innerHTML, querySelector
 // ?  splice, slice (toSliced)
 // ? if/else
 
-
 // TODO: selezionare il carosello
-const carousel = document.querySelector(".carousel-inner")
+const carousel = document.querySelector(".carousel-inner");
 
-const carouselItemsAmount = Math.round(movies.length / 5) 
+const carouselItemsAmount = Math.round(movies.length / 5);
 
-for(let i = 0; i < carouselItemsAmount; i++) {
-    // TODO: creare X carousel items
-    carousel.innerHTML += `
+for (let i = 0; i < carouselItemsAmount; i++) {
+  // TODO: creare X carousel items
+  const start = i * 5;
+  const end = start + 4;
+
+  let columns = "";
+  console.log(
+    `Iterazione loop principale, numero: ${i} \nStart: ${start}\nEnd: ${end}`
+  );
+
+  for (let y = start; y <= end; y++) {
+    console.log(`Film:`, movies[y]);
+    if (y === start) {
+      columns += `
+      <div class="col-9 col-sm-4 col-md-3 col-lg-2">
+      <div class="movie__wrap position-relative">
+        <img
+          src="${movies[y].Poster}"
+          class="position-relative w-100"
+        />
+        <span class="badge bg-primary position-absolute start-0 top-0"
+          >PRIME</span
+        >
+        <div class="movie__details position-absolute w-100">
+          <p>
+            <ion-icon
+              name="checkmark-circle"
+              class="text-info"
+            ></ion-icon>
+            Incluso con Prime
+          </p>
+          <div
+            class="movie__controls d-flex align-items-center justify-content-start justify-content-md-between gap-2"
+          >
+            <button class="movie__play">
+              <ion-icon name="play"></ion-icon>
+            </button>
+            <h4>
+              Riprendi <br />
+              S 3 E 41
+            </h4>
+            <div class="movie__options d-flex gap-1">
+              <button>
+                <ion-icon name="add-outline"></ion-icon>
+              </button>
+              <button>
+                <ion-icon name="ban-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+          <h3 class="mt-2">${movies[y].Title}</h3>
+          <span class="badge"> 13+ </span>
+          <p>
+                ${movies[y].Type.toUpperCase()}, ${movies[y].Year}
+          </p>
+        </div>
+      </div>
+    </div>
+      `;
+    } else if (y <= start + 2) {
+      columns += `
+      <div class="col-2 d-none d-lg-block">
+              <div class="movie__wrap position-relative">
+                <img
+                  src="${movies[y].Poster}"
+                  class="position-relative w-100"
+                />
+                <span class="badge bg-primary position-absolute start-0 top-0"
+                  >PRIME</span
+                >
+                <div class="movie__details position-absolute w-100">
+                  <p>
+                    <ion-icon
+                      name="checkmark-circle"
+                      class="text-info"
+                    ></ion-icon>
+                    Incluso con Prime
+                  </p>
+                  <div
+                    class="movie__controls d-flex align-items-center justify-content-start justify-content-md-between gap-2"
+                  >
+                    <button class="movie__play">
+                      <ion-icon name="play"></ion-icon>
+                    </button>
+                    <h4>
+                      Riprendi <br />
+                      S 3 E 41
+                    </h4>
+                    <div class="movie__options d-flex gap-1">
+                      <button>
+                        <ion-icon name="add-outline"></ion-icon>
+                      </button>
+                      <button>
+                        <ion-icon name="ban-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+                  <h3 class="mt-2">${movies[y].Title}</h3>
+                  <span class="badge"> 13+ </span>
+                  <p>
+                  ${movies[y].Type.toUpperCase()}, ${movies[y].Year}
+
+                  </p>
+                </div>
+              </div>
+            </div>
+      `;
+    }
+    if (y === end - 1) {
+      columns += ` 
+      <div class="col-3 col-lg-2 d-none d-md-block">
+      <div class="movie__wrap position-relative">
+        <img
+          src="${movies[y].Poster}"
+          class="position-relative w-100"
+        />
+        <span class="badge bg-primary position-absolute start-0 top-0"
+          >PRIME</span
+        >
+        <div class="movie__details position-absolute w-100">
+          <p>
+            <ion-icon
+              name="checkmark-circle"
+              class="text-info"
+            ></ion-icon>
+            Incluso con Prime
+          </p>
+          <div
+            class="movie__controls d-flex align-items-center justify-content-start justify-content-md-between gap-2"
+          >
+            <button class="movie__play">
+              <ion-icon name="play"></ion-icon>
+            </button>
+            <h4>
+              Riprendi <br />
+              S 3 E 41
+            </h4>
+            <div class="movie__options d-flex gap-1">
+              <button>
+                <ion-icon name="add-outline"></ion-icon>
+              </button>
+              <button>
+                <ion-icon name="ban-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+          <h3 class="mt-2">${movies[y].Title}</h3>
+          <span class="badge"> 13+ </span>
+          <p>
+          ${movies[y].Type.toUpperCase()}, ${movies[y].Year}
+          </p>
+        </div>
+      </div>
+    </div>
+      
+      `;
+    }
+    if (y === end) {
+      columns += `
+      <div class="col-4 col-md-3 col-lg-2 d-none d-sm-block">
+      <div class="movie__wrap position-relative">
+        <img
+          src="${movies[y].Poster}"
+          class="position-relative w-100"
+        />
+        <span class="badge bg-primary position-absolute start-0 top-0"
+          >PRIME</span
+        >
+        <div class="movie__details position-absolute w-100">
+          <p>
+            <ion-icon
+              name="checkmark-circle"
+              class="text-info"
+            ></ion-icon>
+            Incluso con Prime
+          </p>
+          <div
+            class="movie__controls d-flex align-items-center justify-content-start justify-content-md-between gap-2"
+          >
+            <button class="movie__play">
+              <ion-icon name="play"></ion-icon>
+            </button>
+            <h4>
+              Riprendi <br />
+              S 3 E 41
+            </h4>
+            <div class="movie__options d-flex gap-1">
+              <button>
+                <ion-icon name="add-outline"></ion-icon>
+              </button>
+              <button>
+                <ion-icon name="ban-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+          <h3 class="mt-2">${movies[y].Title}</h3>
+          <span class="badge"> 13+ </span>
+          <p>
+          ${movies[y].Type.toUpperCase()}, ${movies[y].Year}
+          </p>
+        </div>
+      </div>
+    </div>
+      
+      `
+    }
+  }
+
+  carousel.innerHTML += `
     <div class="carousel-item ${i === 0 ? "active" : ""}">
           <div class="row justify-content-center gx-2">
-            
+            ${columns}
           </div>
-        </div>`
-    // i = 0; start => 0, end => 4 
-    // i = 1; start => 5, end => 9
-    // i = 2; start => 10, end => 14
-    // i = 3; start => 15, end => 19
+    </div>`;
+  // i = 0; start => 0, end => 4
+  // i = 1; start => 5, end => 9
+  // i = 2; start => 10, end => 14
+  // i = 3; start => 15, end => 19
 
-    // start = i * 5
-    // end = start + 4
-    const start = i * 5
-    const end = start + 4
-    console.log(`Iterazione loop principale, numero: ${i} \nStart: ${start}\nEnd: ${end}`)
-    
-    for(let y = start; y <= end; y++) {
-        console.log(`Indice film: ${y}`)
-    }
+  // start = i * 5
+  // end = start + 4
 }
-
-
-
-
