@@ -10,6 +10,8 @@
   border-radius: 10px;
 }
 
+
+
 .movie__wrap img {
     aspect-ratio: 16/9;
     object-fit: cover;
@@ -102,4 +104,19 @@
 /* carosello */
 .carousel-inner {
     overflow: visible;
+}
+
+
+@media screen and (max-width: 576px) {
+  .movie__wrap:hover {
+    transform: scale(1.1);
+  }
+
+  .movie__wrap .movie__details {
+    padding: 20px;
+  }
+
+  .movie__wrap .movie__details .movie__play {
+    max-width: 50px;
+  }
 }
