@@ -1,3 +1,62 @@
+
+
+nav a.navbar-brand img {
+  max-width: 100px;
+}
+
+nav .navbar-collapse li {
+  position: relative;
+}
+nav .navbar-collapse li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav .navbar-collapse li a ion-icon {
+  transition-duration: 0.2s;
+}
+
+nav .navbar-collapse li a:hover ion-icon {
+  transform: rotate(180deg);
+}
+
+nav .dropdown__hover {
+  width: 100%;
+  height: 0px;
+
+  position: absolute;
+  top: 50px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: white;
+  overflow: hidden;
+  
+  z-index: 2;
+  
+  padding-block: 0px;
+  padding-inline: 10px;
+  
+  transition: 0.3s;
+}
+
+.carousel .carousel-indicators button {
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+}
+/* position absolute, translateY, height */
+
+nav .navbar-collapse li:hover .dropdown__hover {
+  /* transform: translateY(50px) */
+  height: 400%;
+  padding-block: 10px;
+}
+
 /* CARD - LAYOUT + HOVER */
 .movie__wrap {
   transition: 0.2s;
@@ -10,14 +69,12 @@
   border-radius: 10px;
 }
 
-
-
 .movie__wrap img {
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    object-position: top;
-    border-top-right-radius: inherit;
-    border-top-left-radius: inherit;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: top;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
 }
 
 .movie__wrap img,
@@ -72,10 +129,10 @@
 }
 
 .movie__wrap p {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .movie__wrap .movie__details .badge {
@@ -104,9 +161,8 @@
 
 /* carosello */
 .carousel-inner {
-    overflow: visible;
+  overflow: visible;
 }
-
 
 @media screen and (max-width: 576px) {
   .movie__wrap:hover {
@@ -122,4 +178,3 @@
     max-width: 50px;
   }
 }
-
