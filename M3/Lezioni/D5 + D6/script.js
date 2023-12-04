@@ -236,50 +236,61 @@ const createColumn = function (movie, classString) {
         </div>
       </div>
     </div>
-  `
-}
+  `;
+};
 
-const createCarouselItem = function(start, end) {
+const createCarouselItem = function (start, end) {
   let columns = "";
   console.log(
-    `Iterazione loop principale, numero: ${i} \nStart: ${start}\nEnd: ${end}`
+    `Iterazione loop principale, \nStart: ${start}\nEnd: ${end}`
   );
 
   for (let y = start; y <= end; y++) {
     console.log(`Film:`, movies[y]);
-    let classes = ""
+    let classes = "";
     if (y === start) {
-      classes = "col-9 col-sm-4 col-md-3 col-lg-2"
+      classes = "col-9 col-sm-4 col-md-3 col-lg-2";
     } else if (y <= start + 2) {
-      classes = "col-2 d-none d-lg-block"
+      classes = "col-2 d-none d-lg-block";
     }
     if (y === end - 1) {
-      classes = "col-3 col-lg-2 d-none d-md-block"
+      classes = "col-3 col-lg-2 d-none d-md-block";
     }
     if (y === end) {
-      classes = "col-4 col-md-3 col-lg-2 d-none d-sm-block"
+      classes = "col-4 col-md-3 col-lg-2 d-none d-sm-block";
     }
-    columns += createColumn(movies[y], classes)
+    columns += createColumn(movies[y], classes);
   }
   carousel.innerHTML += `
-    <div class="carousel-item ${i === 0 ? "active" : ""}">
+    <div class="carousel-item ${start === 0 ? "active" : ""}">
           <div class="row justify-content-center gx-2">
             ${columns}
           </div>
     </div>`;
+};
 
+const calculateStartEnd = function(currentPage, itemPerPage) {
+  const start = currentPage * itemPerPage;
+  const end = start + (itemPerPage - 1);
+  // return {
+  //   start: currentPage * itemPerPage,
+  //   end: (currentPage * itemPerPage) + (itemPerPage - 1)
+  // }
+  return {start, end}
+  // return {start:start, end:end}
 }
 
 // TODO: selezionare il carosello
 const carousel = document.querySelector("#movies .carousel-inner");
 
-const carouselItemsAmount = Math.round(movies.length / 5);
+const moviesPerPage = 5
+
+const carouselItemsAmount = Math.round(movies.length / moviesPerPage);
 
 for (let i = 0; i < carouselItemsAmount; i++) {
   // TODO: creare X carousel items
-  const start = i * 5;
-  const end = start + 4;
-  createCarouselItem(start, end)
+  const result = calculateStartEnd(i, moviesPerPage)
+  createCarouselItem(result.start, result.end);
   // i = 0; start => 0, end => 4
   // i = 1; start => 5, end => 9
   // i = 2; start => 10, end => 14

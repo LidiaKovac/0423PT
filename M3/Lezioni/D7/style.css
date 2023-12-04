@@ -1,0 +1,180 @@
+/* .element {
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  animation-name: animazione1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s; 
+  animation: animazione2 5s infinite;
+}
+
+@keyframes animazione1 {
+  from {
+    transform: scale(2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes animazione2 {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1) translate(100px);
+  }
+  35% {
+    transform: scale(0.5) translate(100px, 100px);
+  }
+  90% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1) translate(0px, 0px);
+  }
+} */
+
+.loader__wrap {
+  margin: calc(50% - 110px);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader__wrap .loader__dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(171, 171, 171);
+  animation: scale 1s infinite;
+}
+
+.loader__dot:nth-of-type(even) {
+  animation-delay: 0.5s;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1) translateY(0px);
+  }
+  25% {
+    transform: scale(1.2) translateY(-20px);
+  }
+  50% {
+    transform: scale(1) translateY(0px);
+  }
+  75% {
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+  }
+}
+
+.loader__bar {
+  background-color: lightblue;
+  height: 50px;
+  width: 400px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.loader__bar-inner {
+  background-color: rgb(0, 191, 255);
+  height: 100%;
+  animation: load 1s infinite linear;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 60%;
+}
+
+@keyframes load {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(400px);
+  }
+}
+
+/* @red: #F73F52;
+@orange: #FF9000;
+@yellow: #FBD400;
+@green: #9ED763;
+@blue: #6730EC;
+@purple: #815A8F; */
+
+.pantone {
+  margin: 20%;
+  position: relative;
+}
+.pantone .red .pin {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  position: absolute;
+  bottom: calc(10% - 5px);
+  z-index: 99;
+  left: calc(50% - 5px);
+  border-radius: 50%;
+}
+.pantone > div:not(.pin) {
+  width: 50px;
+  height: 150px;
+  position: absolute;
+  border-radius: 5px;
+  transform-origin: center 90%;
+  animation: swatch 6s ease-in-out;
+  box-shadow: 5px 5px 0px 0px rgb(0, 0, 0, 0.09);
+  -webkit-box-shadow: 5px 5px 0px 0px rgb(0, 0, 0, 0.09);
+}
+
+.pantone .red {
+  background-color: #f73f52;
+  transform: rotate(-25deg);
+  border-top: 2px solid rgb(255, 174, 174);
+  border-left: 2px solid rgb(255, 174, 174);
+}
+.pantone .orange {
+  background-color: #ff9000;
+  transform: rotate(-15deg);
+  border-top: 2px solid #ffd59f;
+  border-left: 2px solid #ffd59f;
+}
+.pantone .yellow {
+  background-color: #fbd400;
+  transform: rotate(-5deg);
+  border-top: 2px solid #fff09c;
+  border-left: 2px solid #fff09c;
+}
+.pantone .green {
+  background-color: #9ed763;
+  transform: rotate(5deg);
+  border-top: 2px solid #ceff9a;
+  border-left: 2px solid #ceff9a;
+}
+.pantone .blue {
+  background-color: #6730ec;
+  transform: rotate(15deg);
+  border-top: 2px solid rgb(163, 123, 255);
+  border-left: 2px solid rgb(163, 123, 255);
+}
+.pantone .purple {
+  background-color: #815a8f;
+  transform: rotate(25deg);
+  border-top: 2px solid #eab1ff;
+  border-left: 2px solid #eab1ff;
+}
+
+@keyframes swatch {
+  /* da 0 a 49 si applica il valore specificato fuori dal keyframes */
+  50% {
+    transform: rotate(0deg);
+    /* raddrizza */
+  }
+  /* da 51 a 100 si applica il valore specificato fuori dal keyframes */
+}
