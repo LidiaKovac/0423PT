@@ -24,6 +24,36 @@ const nextPage = function () {
   nextImg.classList.remove("d-none");
 };
 
+
+
+const car = document.querySelector(".carousel")
+
+
+for(let i = 0; i < divinita.length; i++) {
+    car.innerHTML += `<div class="col-6 text-light"> ${divinita[i]} </div>`
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const prevPage = function () {
   const visiblePage = document.querySelector(".carousel img:not(.d-none)");
   visiblePage.classList.add("d-none");
