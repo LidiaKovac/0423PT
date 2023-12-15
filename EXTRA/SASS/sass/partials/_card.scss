@@ -1,0 +1,22 @@
+.card {
+    // stile di default
+    &--dark {
+        // stile ma dark
+    }
+    &--light {
+        // stile ma light
+    }
+    &--pink {
+        // stile ma pink
+    }
+    &:hover {
+        // over
+    }
+    &:disabled {
+        // disablesd
+    }
+    &.pippo {
+        // altro
+    }
+}
+
