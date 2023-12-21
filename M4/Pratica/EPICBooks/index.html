@@ -43,19 +43,19 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown
+                Carrello
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+              <ul class="dropdown-menu show">
+                <ul id="cart-items"></ul>
+                <!-- <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li> -->
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" id="cart-total"
+                    >Il carrello è vuoto</a
+                  >
                 </li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -80,11 +80,12 @@
           <div class="row" id="books"></div>
         </div>
         <div class="col-4 d-none" id="details">
-            <button onclick="closeSidebar(event)">Chiudi</button>
-            <h1></h1>
-            <h3></h3>
-            <h4></h4>
-            <img src="" alt="">
+          <button onclick="closeSidebar(event)">Chiudi</button>
+          <h1></h1>
+          <h3></h3>
+          <h4></h4>
+          <img src="" alt="" />
+          <button id="addToCart">Add to cart</button>
         </div>
       </div>
     </div>

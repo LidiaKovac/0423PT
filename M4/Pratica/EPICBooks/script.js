@@ -28,6 +28,8 @@ window.onload = function () {
     });
 };
 
+const cart = [];
+
 const selectCard = function (event) {
   const card = event.target.closest(".book");
   card.classList.toggle("border-4");
@@ -41,9 +43,37 @@ const selectCard = function (event) {
       document.querySelector("#details h3").innerText = book.price;
       document.querySelector("#details h4").innerText = book.category;
       document.querySelector("#details img").src = book.img;
+      document.querySelector("#details button#addToCart").onclick =
+        function () {
+          addToCart(book);
+        };
     });
 };
 
-const closeSidebar = function(event) {
-    event.target.closest("#details").classList.add("d-none")
-}
+const closeSidebar = function (event) {
+  event.target.closest("#details").classList.add("d-none");
+};
+
+const addToCart = function (book) {
+  // nell'array cart, NON ci sia il libro che abbia aggiunto
+  const ids = [];
+  for (const libro of cart) {
+    ids.push(libro.asin);
+  }
+  if (!ids.includes(book.asin)) {
+    cart.push(book);
+  }
+  console.log(cart);
+  renderCart(cart);
+};
+
+const renderCart = function (cartArr) {
+  let tot = 0;
+  const ul = document.querySelector("#cart-items");
+  ul.innerHTML = "";
+  for (const book of cartArr) {
+    ul.innerHTML += `<li> <img src="${book.img}"/> | ${book.title} | ${book.price} </li>`;
+    tot += book.price;
+  }
+  document.querySelector("#cart-total").innerText = tot.toFixed(2) + "|" + "€";
+};

@@ -1349,10 +1349,10 @@
       // const params = new URLSearchParams(location.search)
       const id = params.get("id");
       for (const house of houses) {
-        console.log(house)
+        console.log(house);
         if (house.id === id) {
-            document.querySelector("h1").innerText = house.name
-            document.querySelector("h3").innerText = house.description
+          document.querySelector("h1").innerText = house.name;
+          document.querySelector("h3").innerText = house.description;
           break;
         }
       }
