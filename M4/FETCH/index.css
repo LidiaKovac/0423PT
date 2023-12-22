@@ -1,0 +1,7 @@
+input[type="checkbox"]+label {
+    background-color: rgb(255, 131, 131);
+}
+
+input[type="checkbox"]:checked + label {
+    background-color: greenyellow;
+}
